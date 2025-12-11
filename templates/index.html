@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AI Blog Generator</title>
+
+    <!-- Professional Font -->
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+
+    <link rel="stylesheet" href="{{ url_for('static', filename='styles.css') }}">
+</head>
+
+<body>
+
+<header class="header">
+    <h1 class="title">AI Blog Generator</h1>
+    <p class="subtitle">Turn a simple topic into a polished 1000-word blog using AI.</p>
+</header>
+
+<main class="container">
+
+    <section class="input-section">
+        <label for="prompt" class="input-label">Blog Topic</label>
+        <textarea id="prompt" class="input-box" placeholder="e.g., Impact of Artificial Intelligence on Future Work"></textarea>
+
+        <button id="generate-btn" class="primary-btn">
+            <span class="btn-icon">✨</span> Generate Blog
+        </button>
+    </section>
+
+    <div id="loading" class="loading" style="display: none;">
+        <div class="spinner"></div>
+        <p class="loading-text">Generating your blog… please wait.</p>
+    </div>
+
+    <section id="blog-output" class="blog-output"></section>
+
+</main>
+
+<footer class="footer">
+    <p>© 2025 AI Blog Generator • Built with Flask + OpenRouter AI</p>
+</footer>
+
+<script src="{{ url_for('static', filename='script.js') }}"></script>
+</body>
+</html>
