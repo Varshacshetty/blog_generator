@@ -1,5 +1,4 @@
-uiflask
+Flask
+gunicorn
 requests
 python-dotenv
-gunicorn
-
